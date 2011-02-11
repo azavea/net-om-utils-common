@@ -41,7 +41,7 @@ namespace Azavea.Open.Common.Tests
             Chronometer chrono = new Chronometer();
             chrono.Start();
             Thread.Sleep(100);
-            Assert.Less(92.0, Convert.ToDouble(chrono.GetSplitMilliseconds().Split(' ')[0]),
+            Assert.Greater(Convert.ToDouble(chrono.GetSplitMilliseconds().Split(' ')[0]), 92.0, 
                 "Chrono is running slow.");
         }
         /// <exclude/>
@@ -51,7 +51,7 @@ namespace Azavea.Open.Common.Tests
             Chronometer chrono = new Chronometer();
             chrono.Start();
             Thread.Sleep(1000);
-            Assert.Less(0.92, Convert.ToDouble(chrono.GetSplitSeconds().Split(' ')[0]),
+            Assert.Greater(Convert.ToDouble(chrono.GetSplitSeconds().Split(' ')[0]), 0.92, 
                 "Chrono is running slow.");
         }
         /// <exclude/>
@@ -61,7 +61,7 @@ namespace Azavea.Open.Common.Tests
             Chronometer chrono = new Chronometer();
             chrono.Start();
             Thread.Sleep(100);
-            Assert.Less(920000, (int)chrono.GetSplit().Ticks,
+            Assert.Greater((int)chrono.GetSplit().Ticks, 920000, 
                 "Chrono is running slow.");
             Thread.Sleep(100);
             int ticks = (int)chrono.GetSplit().Ticks;
@@ -75,7 +75,7 @@ namespace Azavea.Open.Common.Tests
             Chronometer chrono = new Chronometer();
             chrono.Start();
             Thread.Sleep(100);
-            Assert.Less(920000, (int)chrono.GetSplit().Ticks,
+            Assert.Greater((int)chrono.GetSplit().Ticks, 920000, 
                 "Chrono is running slow.");
             chrono.Reset();
             Thread.Sleep(50);
@@ -89,10 +89,10 @@ namespace Azavea.Open.Common.Tests
             Chronometer chrono = new Chronometer();
             chrono.Start();
             Thread.Sleep(100);
-            Assert.Less(920000, (int)chrono.GetRunTime().Ticks,
+            Assert.Greater((int)chrono.GetRunTime().Ticks, 920000, 
                 "Chrono is running slow.");
             Thread.Sleep(100);
-            Assert.Less(1840000, (int)chrono.GetRunTime().Ticks,
+            Assert.Greater((int)chrono.GetRunTime().Ticks, 1840000, 
                 "Chrono is running slow.");
             chrono.Reset();
             Thread.Sleep(50);
