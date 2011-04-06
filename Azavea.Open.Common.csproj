@@ -89,7 +89,7 @@
     <Content Include="lib\log4net\log4net_README.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="lib\nunit\nunit.framework_LICENSE.html">
+    <Content Include="lib\nunit\NUnit-2.5.9-Custom_LICENSE.TXT">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
