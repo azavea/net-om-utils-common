@@ -84,23 +84,22 @@ namespace Azavea.Open.Common.Tests
         }
 
         /// <exclude/>
-        [Test, ExpectedException(typeof(KeyNotFoundException))]
+        [Test]
         public void ResetTest2()
         {
             TimedCache<int, int> cache = new TimedCache<int, int>(new TimeSpan(0, 1, 0));
-
-            cache.Reset(1);
+            Assert.Throws<KeyNotFoundException>(delegate() { cache.Reset(1); });
         }
 
         /// <exclude/>
         [Ignore("This test relies on Thread.Sleep, which is notoriously inconsistent.  Unignore it and test locally if you make changes to the code.")]
-        [Test, ExpectedException(typeof(KeyNotFoundException))]
+        [Test]
         public void ResetTest3()
         {
             TimedCache<int, int> cache = new TimedCache<int, int>(new TimeSpan(0, 0, 5));
             cache.Set(1, 2);
             System.Threading.Thread.Sleep(5100);
-            cache.Reset(1);
+            Assert.Throws<KeyNotFoundException>(delegate() { cache.Reset(1); });
         }
 
         /// <exclude/>
