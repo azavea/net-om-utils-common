@@ -639,6 +639,26 @@ namespace Azavea.Open.Common
         }
 
         /// <summary>
+        /// Similar to the regular GetParameter method, except it will substitute 
+        /// environment variables in the values if present.
+        /// </summary>
+        /// <param name="component">The component or section of the config file, used to
+        ///                         locate the parameter.</param>
+        /// <param name="parameter">The name of the config parameter.</param>
+        /// <param name="tolerant">If true, this method logs warnings for unmatched environment
+        ///                        variables.  If false, it throws exceptions.</param>
+        /// <param name="defaultValue">Value to return if the parameter doesn't exist.</param>
+        /// <returns>The string value for the parameter.  Will never be null, if no
+        ///          value could be found this method will throw.  Could be ""
+        ///          since "" is a valid thing to have in a config file.</returns>
+        public string GetParameterWithSubstitution(string component, string parameter,
+            bool tolerant, string defaultValue)
+        {
+            string value = GetParameter(component, parameter, defaultValue);
+            return ReplaceEnvironmentVariables(value, tolerant);
+        }
+
+        /// <summary>
         /// Similar to GetParameter, except rather than throwing an exception if a parameter
         /// doesn't exist, returns the default value.
         /// </summary>
