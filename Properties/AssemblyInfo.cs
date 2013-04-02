@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Azavea.Open.Common")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A set of common C# utility classes. Part of the Oatmeal Utilities library.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Azavea")]
 [assembly: AssemblyProduct("Azavea.Open.Common")]
-[assembly: AssemblyCopyright("Copyright (©) Azavea 2010")]
+[assembly: AssemblyCopyright("Copyright (©) Azavea 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 // Configure log4net using the .config file
@@ -35,3 +35,5 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("2.0.0.*")]
 [assembly: AssemblyFileVersion("2.0.0")]
+// Used for nuget packaging
+[assembly: AssemblyInformationalVersion("2.0.0")]

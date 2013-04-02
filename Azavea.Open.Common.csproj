@@ -38,13 +38,12 @@
     <DocumentationFile>bin\Release\Azavea.Open.Common.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\log4net\log4net.dll</HintPath>
+      <HintPath>packages\log4net.2.0.0\lib\net20-full\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework, Version=2.2.10.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\nunit\nunit.framework.dll</HintPath>
+    <Reference Include="nunit.framework">
+      <HintPath>packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -75,6 +74,8 @@
     <Compile Include="Tests\TimedCacheTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Azavea.Open.Common.nuspec" />
+    <None Include="packages.config" />
     <None Include="Tests\ConfigTest.config" />
     <None Include="Tests\test.config" />
   </ItemGroup>
@@ -82,18 +83,6 @@
     <Content Include="Azavea.Open.Common.NamespaceDocs.xml">
     </Content>
     <Content Include="Azavea.Open.Common.LICENSE.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <EmbeddedResource Include="lib\log4net\log4net_LICENSE.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <Content Include="lib\log4net\log4net_NOTICE.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="lib\log4net\log4net_README.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="lib\nunit\NUnit-2.5.9-Custom_LICENSE.TXT">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
