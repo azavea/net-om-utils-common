@@ -15,7 +15,7 @@
     <tags>utility collections caching</tags>
     <dependencies>
       <!-- The explicit versions of NUnit and log4net are required by FastDAO which has not been moved to NuGet (yet) -->
-      <dependency id="NUnit" version="[2.5.9]" />
+      <dependency id="NUnit" version="[2.5.9.10348]" />
       <dependency id="log4net" version="[1.2.10]" />
     </dependencies>
   </metadata>
