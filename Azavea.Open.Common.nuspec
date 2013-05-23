@@ -13,9 +13,6 @@
     <releaseNotes></releaseNotes>
     <copyright>Copyright 2013</copyright>
     <tags>utility collections caching</tags>
-    <dependencies>
-      <dependency id="NUnit" version="2.6" />
-      <dependency id="log4net" version="1.2.10" />
-    </dependencies>
   </metadata>
+  <files/>
 </package>
