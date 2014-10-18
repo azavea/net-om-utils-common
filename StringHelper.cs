@@ -460,9 +460,11 @@ namespace Azavea.Open.Common
                 {
                     string xStr = xMatches[index].Value;
                     string yStr = yMatches[index].Value;
+
+                    int retVal;
+
                     double xVal;
                     double yVal;
-                    int retVal;
                     if (double.TryParse(xStr, out xVal) && double.TryParse(yStr, out yVal))
                     {
                         retVal = xVal.CompareTo(yVal);
@@ -471,14 +473,13 @@ namespace Azavea.Open.Common
                             return retVal;
                         }
                     }
-                    else
+
+                    retVal = xStr.CompareTo(yStr);
+                    if (retVal != 0)
                     {
-                        retVal = xStr.CompareTo(yStr);
-                        if (retVal != 0)
-                        {
-                            return retVal;
-                        }
+                        return retVal;
                     }
+
                     index++;
                 }
                 // Now one of them ran out of matches, so the longer string (the one that still has
