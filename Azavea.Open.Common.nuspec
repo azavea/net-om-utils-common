@@ -13,6 +13,7 @@
     <releaseNotes></releaseNotes>
     <copyright>Copyright 2013</copyright>
     <tags>utility collections caching</tags>
+    <repository type="git" url="https://github.com/Azavea/net-om-utils-common.git" branch="nuget" />
   </metadata>
   <files/>
 </package>
